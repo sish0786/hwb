@@ -2,8 +2,13 @@ import { Box, Button, Grid, Tab, Tabs, Typography } from "@mui/material";
 import React from "react";
 import whatWeDo from "../resources/whatWeDo.svg";
 import RequestsModal from './RequestsModal';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+
 
 function ServiceInfo() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg'));
   const [value, setValue] = React.useState("item");
   const [modalOpen, setModalOpen] = React.useState(false);
 
@@ -18,7 +23,7 @@ function ServiceInfo() {
 
   return (
     <Grid container sx={{ background: "#165A4A" }}>
-      <Grid item xs="7">
+      <Grid item xs={isSmallScreen?"12":"7"}>
         <Grid container padding={7} gap={5}>
           <Grid item xs="12">
             <Typography
@@ -56,19 +61,17 @@ function ServiceInfo() {
         </Grid>
       </Grid>
 
-      <Grid item xs="5">
+      <Grid item xs={isSmallScreen?"12":"5"}>
         <Grid container padding={7} gap={1}>
-          <Grid item xs="8">
-            <Box sx={{ width: "100%" }}>
+          <Grid item xs="12">
               <Tabs textColor="secondary"  indicatorColor="secondary" value={value} onChange={handleChange} centered>
                 <Tab value="item" sx={{color:"#ffff"}} label="Request Items" />
                 <Tab disabled label="" />
                 <Tab value="airport" sx={{color:"#ffff"}} label="Airport Pickup" />
               </Tabs>
-            </Box>
           </Grid>
           <Grid xs="12" item>
-            <img width="70%" src={whatWeDo} alt="airport Image"></img>
+            <img width="100%" src={whatWeDo} alt="airport Image"></img>
           </Grid>
         </Grid>
       </Grid>
