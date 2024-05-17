@@ -1,9 +1,27 @@
 import { Grid, Typography } from "@mui/material";
 import Carousel from "./Carousel";
 import img1 from "../resources/home.svg";
+import QuoteCard from "./QuoteCard";
 
 
 const imageList = [img1,img1,img1,img1];
+
+const teamQuotes = [
+  {
+    image: img1,
+    name: 'Mervat Lorem Ipsum',
+    designation: 'Incharge Ipsum',
+    quote: 'The Smiles on their faces naturally brings a smile on my face as well.'
+  },
+  {
+    image: img1,
+    name: 'John Doe',
+    designation: 'Developer',
+    quote: 'Coding is not just typing. It\'s thinking and problem-solving.'
+  },
+  // More team members
+];
+
 
 export default function Home() {
   return (
@@ -27,6 +45,11 @@ export default function Home() {
           <Grid container justifyContent={"center"}>
             <Carousel images={imageList}></Carousel>
           </Grid>
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid item xs={12}>
+          <QuoteCard people={teamQuotes}></QuoteCard>
         </Grid>
       </Grid>
     </>
