@@ -1,6 +1,8 @@
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import ServiceInfo from "./components/ServiceInfo";
+import NavBar from "./components/Nav";
+import Home from "./components/Home";
 
 const theme = createTheme({
   palette:{
@@ -23,6 +25,8 @@ const theme = createTheme({
 function App() {
   return (
       <ThemeProvider theme={theme}>
+          <NavBar></NavBar>
+          <Home></Home>
           <ServiceInfo></ServiceInfo>
       </ThemeProvider>
   );

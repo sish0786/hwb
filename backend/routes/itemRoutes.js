@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const ItemRequest = require('../models/ItemRequest');
+const PickupRequest = require('../models/PickupRequest'); // Make sure this matches your schema file
 
-// POST route to create an item request
+// POST route to create a pickup request
 router.post('/', async (req, res) => {
   try {
-    const newItemRequest = new ItemRequest(req.body);
-    await newItemRequest.save();
-    res.status(201).send(newItemRequest);
+    const newPickupRequest = new PickupRequest(req.body);
+    await newPickupRequest.save();
+    res.status(201).send(newPickupRequest);
   } catch (error) {
     res.status(400).send(error);
   }
