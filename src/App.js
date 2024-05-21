@@ -3,6 +3,8 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import ServiceInfo from "./components/ServiceInfo";
 import NavBar from "./components/Nav";
 import Home from "./components/Home";
+import AboutUs from "./components/AboutUs";
+import Footer from "./components/Footer";
 
 const theme = createTheme({
   palette:{
@@ -18,7 +20,6 @@ const theme = createTheme({
   },
   typography:{
     fontFamily: "Inter",
-
   }
 })
 
@@ -27,7 +28,9 @@ function App() {
       <ThemeProvider theme={theme}>
           <NavBar></NavBar>
           <Home></Home>
+          <AboutUs></AboutUs>
           <ServiceInfo></ServiceInfo>
+          <Footer></Footer>
       </ThemeProvider>
   );
 }

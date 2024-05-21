@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Typography, Box } from '@mui/material';
 
+
+
 const QuoteCard = ({ people }) => {
   const [activeStep, setActiveStep] = useState(0);
   const maxSteps = people.length;
