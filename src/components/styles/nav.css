@@ -12,6 +12,7 @@ nav{
     height: 80px;
     width: 100%;
     justify-content: center;
+    background-color: #f0eeee;
 }
 nav img{
     position: absolute;

@@ -28,7 +28,7 @@ const Carousel = ({ images }) => {
   }, [activeStep, autoPlay]);
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1, position: 'relative', overflow: 'hidden' }}>
+    <Box sx={{ maxWidth: 650, marginTop: 10, marginLeft: 10, flexGrow: 1, position: 'relative', overflow: 'hidden' }}>
       <img
         src={images[activeStep]}
         alt={`Image ${activeStep}`}

@@ -28,7 +28,7 @@ const teamQuotes = [
 
 export default function Home() {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg'));
   return (
     <>
       <Grid container padding={isSmallScreen ? 10 : 20} paddingTop={isSmallScreen ? 5 : 10}>

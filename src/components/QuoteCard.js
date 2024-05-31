@@ -32,13 +32,15 @@ const QuoteCard = ({ people }) => {
       padding: 2,
       maxWidth: '100%',
       boxShadow: 3,
-      border: '1px solid #ccc'  // Grey border
+      background: "#D9D9D9",
     }}>
       <Box sx={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        maxWidth: '40%'
+        margin: '2rem',
+        marginLeft: '8rem',
+        maxWidth: '30rem'
       }}>
         <img
           src={person.image}
