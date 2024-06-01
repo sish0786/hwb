@@ -7,31 +7,31 @@ import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 
 const theme = createTheme({
-  palette:{
+  palette: {
     primary: {
       main: '#165A4A'
     },
-    secondary:{
-      main:"#ffff"
+    secondary: {
+      main: "#ffff"
     },
-    text:{
+    text: {
       primary: '#165A4A'
     }
   },
-  typography:{
+  typography: {
     fontFamily: "Inter",
   }
-})
+});
 
 function App() {
   return (
-      <ThemeProvider theme={theme}>
-          <NavBar></NavBar>
-          <Home></Home>
-          <AboutUs></AboutUs>
-          <ServiceInfo></ServiceInfo>
-          <Footer></Footer>
-      </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <NavBar />
+      <div id="home"><Home /></div>
+      <div id="about"><AboutUs /></div>
+      <div id="whatWeDo"><ServiceInfo /></div>
+      <Footer />
+    </ThemeProvider>
   );
 }
 
