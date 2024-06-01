@@ -70,7 +70,7 @@ const NavBar = () => {
               What We Do
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               className={active === 'team' ? 'active' : ''}
               href='#'
@@ -78,11 +78,10 @@ const NavBar = () => {
             >
               Team
             </a>
-          </li>
+          </li> */}
           <li style={{ marginLeft: "50px" }}>
-            <Button
-              variant='contained'
-              sx={{ backgroundColor: "#165A4A" }}
+            <Button 
+              variant='disabled'
             >
               Donate Items
             </Button>
